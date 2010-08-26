@@ -1,7 +1,7 @@
 package Template::Plugin::GoogleLaTeX;
 
 use strict; use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Template::Plugin::Filter;
 use base qw( Template::Plugin::Filter );
@@ -76,12 +76,12 @@ __END__
 
 =head1 NAME
 
-Template::Plugin::GoogleLaTeX - render LaTeX equations using Google's
+Template::Plugin::GoogleLaTeX - Render LaTeX equations using Google's
 Chart API
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =head1 SYNOPSIS
 

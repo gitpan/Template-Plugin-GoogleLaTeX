@@ -1,16 +1,29 @@
 Template-Plugin-GoogleLaTeX
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+Render LaTeX equations using Google's Chart API
 
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+Generates an image tag to render the given LaTeX equation using Google's
+chart API. See
+http://code.google.com/apis/chart/docs/gallery/formulas.html.
 
+    [%- USE GoogleLaTeX -%]
+    <p>[%- FILTER latex
+        alt = '[ Utility maximization ]',
+        title = 'Utility maximization',
+        class = 'display',
+        style = 'border:3px outset #dde; padding:16px;',
+        id = 'umax',
+        height = 100,
+        color = 'fa1111',
+        fill = 'bg,lg,20,ddddee,1,1111ff,0'
+    -%]
+    \begin{eqnarray}
+    \max U(x,y) & = & \ln x + \ln y \\
+    \mathrm{s.t.} & & p_xx + p_yy = I \\
+    & & x \geq 0, y \geq 0
+    \end{eqnarray}
+    [%- END -%]
+    </p>
 
 INSTALLATION
 
